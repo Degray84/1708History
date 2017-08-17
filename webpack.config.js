@@ -16,17 +16,17 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
         }, ],
-    },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            sourceMap: true
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
-        })
-    ]
+    }
+    // plugins: [
+    //     new webpack.optimize.UglifyJsPlugin({
+    //         compress: {
+    //             warnings: false
+    //         },
+    //         sourceMap: true
+    //     }),
+    //     new webpack.ProvidePlugin({
+    //         $: 'jquery',
+    //         jQuery: 'jquery'
+    //     })
+    // ]
 };
