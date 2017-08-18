@@ -8,15 +8,16 @@ block content
     .main__title
       h2.main-title Историческая справка
     .main__dates
-      ul.dates-list
+      .dates-list
         each data in [1949,1957,1960,1973,1988,1992,1993,1994,1995,1996,1998,2000,2001,2002,2003,2004,2005,2006,2008,2010,2012,2015,2016,2017]
-          li.dates-list__item= data
+          .dates-list__item= data
     .main__content
       ul.content-list
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/1949_1.png")
                 .content-desc__text.
@@ -25,8 +26,9 @@ block content
               img(src="./images/1949.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/1957_1.png")
                 .content-desc__text.
@@ -35,18 +37,20 @@ block content
               img(src="./images/1957.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   В 1960 году система трудовых резервов переименована в систему профессионально-технического образования. В штат учебно-методического кабинета введена должность старшего методиста. Организован филиал в городе Комсомольске-на-Амуре, который возглавляла Веретенникова М.М.
             .content-item__bg
               img(src="./images/1960.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/1973_1.png")
                 .content-desc__text.
@@ -55,8 +59,9 @@ block content
               img(src="./images/1973.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/1979_1.png")
                 .content-desc__text.
@@ -65,28 +70,31 @@ block content
               img(src="./images/1979.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   На основании приказа от 26 декабря 1988 г. №32-пр произошло слияние учебно-методического кабинета и краевого института усовершенствования учителей. Затем в результате реорганизации образован «Учебно-методический кабинет профтехобразования».
             .content-item__bg
               img(src="./images/1988.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   В 1992 году заведующей учебно-методическим кабинетом профтехобразования назначена Щелкун Надежда Игнатьевна. В это время учебно-методический кабинет профтехобразования находился по адресу: переулок Дежнева, 15.
             .content-item__bg
               img(src="./images/1992.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/1993_1.png")
                 .content-desc__text.
@@ -95,38 +103,42 @@ block content
               img(src="./images/1993.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   В 1994 году организована работа с училищами и лицеями края по внедрению государственных образовательных стандартов начального профессионального образования.
             .content-item__bg
               img(src="./images/1994.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   В 1995 году началась разработка учебно-программной документации и системы контроля качества профессиональной подготовки. Проводились лекционные семинарские занятия для инженерно-педагогических работников профессиональных училищ и лицеев края с участием академика Беспалько В.П. по освоению методики объективного контроля за результатами обучения.
             .content-item__bg
               img(src="./images/1995.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   В 1996 году прошло обучение группы педагогов-психологов профессиональных училищ и лицеев края в городе Новосибирске при экспериментальной площадке дифференцированного обучения с учетом латеральности. Учебно-методический кабинет профтехобразования приказом от 13 мая 1997 г. №270-П переименован в государственное образовательное учреждение дополнительного профессионального образования «Краевой научно-методический центр начального профессионального образования». Директором назначена Вечёра Светлана Юрьевна. Организованы экспериментальные площадки... 
             .content-item__bg
               img(src="./images/1996.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
-              .content-desc
+            .content-item__desc.content-item__desc_left
+              .content-desc 
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/1998_1.png")
                 .content-desc__text.
@@ -135,38 +147,42 @@ block content
               img(src="./images/1998.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   2001 год. Участие психолого-педагогической лаборатории краевого научно-методического центра во Всероссийском исследовании учащихся начального профессионального образования «Социальный портрет учащегося профессионального училища».
             .content-item__bg
               img(src="./images/2000.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   2001 год. Участие психолого-педагогической лаборатории краевого научно-методического центра во Всероссийском исследовании учащихся начального профессионального образования «Социальный портрет учащегося профессионального училища».
             .content-item__bg
               img(src="./images/2001.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   2002 год. Проведен семинар-практикум с участием международного центра развития модульной системы обучения по теме: «Организация учебного процесса по модульной технологии обучения» для педагогических работников края по профессии «Токарь». К 2005 году внедрена блочно-модульная программа по 9 массовым профессиям. Созданы опорные учебные заведения по информационно-коммуникационным технологиям, методической работе, курсу ОБЖ.
             .content-item__bg
               img(src="./images/2002.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/2003_1.png")
                 .content-desc__text.
@@ -175,18 +191,20 @@ block content
               img(src="./images/2003.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   2004 год. Краевой научно-методический центр признан победителем в краевом конкурсе в области качества, проводимом Правительством Хабаровского края совместно с Хабаровским центром стандартизации, метрологии сертификации, Советом по предпринимательству при Губернаторе края, Дальневосточной торгово-промышленной палатой.
             .content-item__bg
               img(src="./images/2004.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/2005_1.png")
                 .content-desc__text.
@@ -195,18 +213,20 @@ block content
               img(src="./images/2005.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   В соответствии с постановлением Губернатора Хабаровского края от 06 мая 2006 г. №107 «О реорганизации краевых государственных учреждений начального профессионального образования» государственное образовательное учреждение дополнительного профессионального образования «Краевой научно-методический центр начального профессионального образования» и «Краевой центр лицензирования, аттестации и аккредитации учебных заведений начального профессионального образования и учреждений профессиональной подготовки» реорганизованы путем слияния в краевое государственное ... 
             .content-item__bg
               img(src="./images/2006.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/2008_1.png")
                 .content-desc__text.
@@ -215,28 +235,31 @@ block content
               img(src="./images/2008.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   Приказом министерства образования Хабаровского края от 25 ноября 2010 г. №2291 Краевое государственное учреждение «Учебно-инновационный центр профессионального образования» переименовано в Краевое государственное бюджетное учреждение «Учебно-инновационный центр образования».
             .content-item__bg
               img(src="./images/2010.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
+                .content-desc__text.content-desc__text_noImg.
                   Распоряжением Правительства Хабаровского края от 13 февраля 2012 г. №38-рп «О реорганизации краевых государственных бюджетных учреждений в 2012 году», распоряжением министерства образования и науки Хабаровского края от 21 марта 2012 г. №578 «О реорганизации краевых государственных бюджетных учреждений» в результате реорганизации путем слияния краевого государственного бюджетного учреждения «Учебно-инновационный центр образования», краевого государственного бюджетного образовательного учреждения дополнительного профессионального образования (повышения... 
             .content-item__bg
               img(src="./images/2012.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                .content-desc__border
                 .content-desc__img
                   img(src="./images/2015_1.png")
                 .content-desc__text.
@@ -245,21 +268,21 @@ block content
               img(src="./images/2015.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_left
               .content-desc
+                //- .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
-                  
+                .content-desc__text.content-desc__text_noImg. 
             .content-item__bg
               img(src="./images/2016.png").content-bg
         li.content-list__item
           .content-item
-            .content-item__desc
+            .content-item__desc.content-item__desc_right
               .content-desc
+                //- .content-desc__border
                 .content-desc__img
                   img(src="./")
-                .content-desc__text.
-                  
+                .content-desc__text.content-desc__text_noImg.
             .content-item__bg
               img(src="./images/2017.png").content-bg
