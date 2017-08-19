@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    margin-top: 50vh;
+    // margin-top: 50vh;
     display: block;
     width: 1214px;
     padding: 0 30px;
@@ -100,7 +100,7 @@ $dateMargin: 20px;
     &__bg {
         position: absolute;
         overflow: hidden;
-        bottom: 0;
+        bottom: 22%;
         left: 0;
         width: 100%;
         height: 50%;
@@ -171,8 +171,8 @@ $dateMargin: 20px;
 
         }
         &_right {
-            transform: translateX(50%);
-            right: 28.8%;
+            transform: translateX(-50%);
+            left: 71.2%;
         }
         &_left {
             transform: translateX(-50%);
