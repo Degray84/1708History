@@ -34,9 +34,7 @@ export default function () {
                 offsetPoint = window.innerHeight / 2,
                 activList = dateList[i];
             activList.onclick = function () {
-                // Расстояние от начала статьи до начала документа + 30px
                 let pageOffset = contentList[i].getBoundingClientRect().top + pageYOffset - window.innerHeight / 6;
-
                 return scroll(pageOffset);
             };
             if (contentOffset <= offsetPoint) {

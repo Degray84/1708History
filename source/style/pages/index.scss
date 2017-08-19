@@ -1,6 +1,5 @@
 .main {
-    position: relative;
-    // margin-top: 50vh;
+    position: relative; // margin-top: 50vh;
     display: block;
     width: 1214px;
     padding: 0 30px;
@@ -60,6 +59,7 @@ $dateMargin: 20px;
     }
     &__item {
         float: left;
+        user-select: none;
         font-size: 14px;
         font-family: "OpenSans";
         color: rgb(78, 104, 176);
@@ -67,9 +67,7 @@ $dateMargin: 20px;
         margin-left: $dateMargin;
         cursor: pointer;
         &_active {
-            border-radius: 1px;
-            background: rgba(92, 250, 111, 1);
-            box-shadow: 0px 0px 0px 8px rgba(92, 250, 111, 1);
+            color: #ffc393;
         }
     }
 }
@@ -130,7 +128,7 @@ $dateMargin: 20px;
         height: calc(100% + 40px);
         border-radius: 10px;
         background-color: rgb(251, 251, 251);
-        background-color: lightgreen;
+        background-color: #fbfbfb;
         box-shadow: 0px 1px 4.95px 0.05px rgba(14, 13, 13, 0.08);
         width: 440px;
     }
@@ -168,7 +166,6 @@ $dateMargin: 20px;
             width: 55%;
             margin-left: -3.5%;
             margin-right: 3.5%;
-
         }
         &_right {
             transform: translateX(-50%);
@@ -191,9 +188,9 @@ $dateMargin: 20px;
             font-family: "OpenSans";
             color: rgb(255, 255, 255);
             line-height: 0.9;
-            &_3{
-               bottom: 63%;
-               transform: translateX(30%); 
+            &_3 {
+                bottom: 63%;
+                transform: translateX(30%);
             }
         }
     }
@@ -209,7 +206,7 @@ $dateMargin: 20px;
         }
         &_3 {
             width: 28%;
-                        left: 50%;
+            left: 50%;
         }
     }
     &__bg {
