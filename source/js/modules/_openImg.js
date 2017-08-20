@@ -13,15 +13,10 @@ export default function () {
                 e.preventDefault();
                 bImgs[i].style.display = 'block';
                 animate(bImgs[i], 'zoomInLeft');
-                document.body.style.overflow = 'hidden';
-                document.body.style.marginLeft = '-17px';
 
             })
             bImgs[i].addEventListener('click', function (e) {
                 e.preventDefault();
-
-                document.body.style.overflow = '';
-                document.body.style.marginLeft = '';
                 animate(bImgs[i], 'zoomOutRight');
                 setTimeout(function(){bImgs[i].style.display = 'none'}, 1000)
             })

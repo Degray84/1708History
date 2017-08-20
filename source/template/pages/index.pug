@@ -7,10 +7,6 @@ block content
   .main
     .main__title
       h2.main-title Историческая справка
-    .main__dates
-      .dates-list
-        each data in [1949,1957,1960,1973,1979,1988,1992,1993,1994,1995,1996,1998,2000,2001,2002,2003,2004,2005,2006,2008,2010,2012,2015,2016,2017]
-          .dates-list__item= data
     .main__content
       ul.content-list
         li.content-list__item
@@ -342,7 +338,8 @@ block content
               .content-desc
                 .content-desc__border
                 .content-desc__img
-                  img(src="./images/2005_1.png")
+                  img(src="./images/2005_1.png").smallImg
+                img(src="./images/2005_2.jpg").bigImg
                 .content-desc__text.
                   2005 год. Участие в совместном Российско-Канадском проекте Мак Грегор в области «Домостроение», «Основы бизнеса». Организовано проведение курсов повышения квалификации преподавателей спецдисциплин и мастеров производственного обучения по направлениям: «Строительство деревянных каркасных домов по канадской технологии» и «Основы бизнеса».
             .content-item__bg
@@ -508,3 +505,9 @@ block content
                 img(src="./images/train_3.png").parallax__train.parallax__train_3
                 img(src="./images/rail.png").parallax__bg
               img(src="./images/2017.png").content-bg
+    .main__dates
+      .dates.animated.bounceInLeft
+        .dates-button Даты
+        .dates-list
+          each data in [1949,1957,1960,1973,1979,1988,1992,1993,1994,1995,1996,1998,2000,2001,2002,2003,2004,2005,2006,2008,2010,2012,2015,2016,2017]
+            .dates-list__item= data

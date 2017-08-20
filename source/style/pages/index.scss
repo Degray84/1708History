@@ -6,6 +6,9 @@
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 1.42;
+    @include phones {
+        padding: 0;
+    }
     &__title {
         margin-top: 30px;
     }
@@ -22,11 +25,31 @@
         font-weight: 700;
         line-height: 22px;
         text-transform: uppercase;
+        @include phones{
+            font-size: 18px;
+        }
     }
     &__dates {
-        position: relative;
+        position: absolute;
         width: 100%;
-        margin-top: 35px;
+        top: 90px;
+        @include tablets {
+            position: fixed;
+            width: 100px;
+            top: 0;
+            margin: 0;
+            margin-left: -102px;
+        }
+        @include phones {
+            position: fixed;
+            width: 100px;
+            top: 0;
+            margin: 0;
+            margin-left: -72px;
+        }
+        &_active {
+            margin-left: -10px;
+        }
     }
     &__content {
         margin-top: 130px;
@@ -34,40 +57,106 @@
 }
 
 $dateMargin: 20px;
-.dates-list {
-    position: absolute;
-    top: 0;
-    height: inherit;
-    width: 100%;
-    margin-left: -$dateMargin;
-    padding: 10px 0;
-    margin-top: -10px;
-    &_fixed {
-        top: 10px;
-        position: fixed;
-        background: #fff;
-        z-index: 150;
-    }
-    &:before {
-        display: table;
-        content: "";
-    }
-    &:after {
-        display: table;
-        content: "";
-        clear: both;
-    }
-    &__item {
-        float: left;
+.dates-button {
+    background: #fbfbfb;
+    display: none;
+    left: 67px;
+    bottom: 20vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include tablets {
+        display: block;
+        position: absolute;
         user-select: none;
-        font-size: 14px;
+        font-size: 18px;
+        text-transform: uppercase;
         font-family: "OpenSans";
         color: rgb(78, 104, 176);
-        line-height: 1.2;
-        margin-left: $dateMargin;
-        cursor: pointer;
-        &_active {
-            color: #ffc393;
+        padding: 10px 20px;
+    }
+    @include phones {
+        display: block;
+        position: absolute;
+        user-select: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: "OpenSans";
+        color: rgb(78, 104, 176);
+        padding: 4px 10px;
+    }
+}
+
+.dates {
+    position: relative;
+    @include tablets {
+        height: 100vh;
+    }
+    @include phones {
+        height: 100vh;
+    }
+    &-list {
+        position: absolute;
+        top: 0;
+        height: inherit;
+        width: 100%;
+        margin-left: -$dateMargin;
+        padding: 10px 0;
+        margin-top: -10px;
+        &_fixed {
+            top: 10px;
+            position: fixed;
+            background: #fff;
+            z-index: 150;
+        }
+        &:before {
+            display: table;
+            content: "";
+        }
+        &:after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+        @include tablets {
+            position: relative;
+            top: 10px;  
+            width: 42px;
+            background: #fbfbfb;
+            padding: 10px;
+            padding-left: 40px;
+        }
+        @include phones {
+            top: 10px;
+            position: relative;
+            width: 42px;
+            background: #fbfbfb;
+            padding: 10px;
+            padding-left: 40px;
+        }
+        &__item {
+            float: left;
+            user-select: none;
+            font-size: 14px;
+            font-family: "OpenSans";
+            color: rgb(78, 104, 176);
+            line-height: 1.2;
+            margin-left: $dateMargin;
+            z-index: 1999;
+            @include tablets {
+                font-size: 18px;
+                margin: 0;
+                padding: 2px 15px;
+                margin-left: -25px;
+            }
+            @include phones {
+                font-size: 18px;
+                margin: 0;
+                padding: 0 2px;
+            }
+            cursor: pointer;
+            &_active {
+                color: #ffc393;
+            }
         }
     }
 }
@@ -88,11 +177,17 @@ $dateMargin: 20px;
         position: absolute;
         top: 0;
         margin: 0 70px;
+
         &_left {
             left: 0;
         }
         &_right {
             right: 0;
+        }
+        @include phones {
+            margin: 0;
+            top: -7vh;
+            left: 0;
         }
     }
     &__bg {
@@ -102,6 +197,9 @@ $dateMargin: 20px;
         left: 0;
         width: 100%;
         height: 50%;
+        @include phones {
+            bottom: -20vh;
+        }
     }
 }
 
@@ -110,6 +208,8 @@ $dateMargin: 20px;
     display: none;
     @include phones {
         display: block;
+        @include centered(x);
+        width: 110%;
     }
 }
 
@@ -117,6 +217,15 @@ $dateMargin: 20px;
     position: relative;
     width: 470px;
     z-index: 1;
+    @include phones {
+        width: 95vw;
+    }
+    @include phones {
+        z-index: 0;
+    }
+    @include phones {
+        z-index: 0;
+    }
     &:after {
         display: table;
         content: "";
@@ -132,6 +241,11 @@ $dateMargin: 20px;
         background-color: #fbfbfb;
         box-shadow: 0px 1px 4.95px 0.05px rgba(14, 13, 13, 0.08);
         width: 440px;
+        @include phones {
+            right: 20px;
+            @include centered(x);
+            width: 120vw;
+        }
         &_slider {
             height: calc(100% + 70px);
         }
@@ -151,11 +265,18 @@ $dateMargin: 20px;
         float: right;
         width: 360px;
         font-family: 'Roboto', sans-serif;
+        @include phones {
+            width: 65vw;
+            margin: 0;
+        }
         &_unActive {
             display: none;
         }
         &_noImg {
             width: 400px;
+            @include phones {
+                width: 90vw;
+            }
         }
         &_active {
             display: block;
@@ -265,6 +386,11 @@ $dateMargin: 20px;
 
 .smallImg {
     cursor: pointer;
+    @include phones{
+        width: 25vw;
+        margin-left: 2vw;
+        user-select: none;
+    }
 }
 
 .bigImg {
